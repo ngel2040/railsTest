@@ -1,0 +1,24 @@
+// Place all the styles related to the store controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.store{
+  h1{
+    margin:0;
+    padding-bottom: .5em;
+    color:#226;
+    border-bottom:3px dotted #77d;
+  }
+}
+
+.entry{
+  overflow:auto;
+  margin-top: 1em;
+  border-bottom:1px dotted #77d;
+  min-height:100px;
+  img{
+    width:80px;
+    margin:0 5px 5px 0;
+    position:absolute;
+  }
+  
+}

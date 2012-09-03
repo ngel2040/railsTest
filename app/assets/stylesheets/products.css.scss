@@ -38,3 +38,22 @@ h1{margin:5px;}
 		}
 	}
 }
+
+#columns{
+  ul{
+    &:after{
+      content:'';
+      display: block;
+      clear: both;
+    }
+    li{
+      float:left;
+      min-width:100px;
+      text-align:center;
+      a{
+        display:block;
+        height:100%;
+      }
+    }
+  }
+}
