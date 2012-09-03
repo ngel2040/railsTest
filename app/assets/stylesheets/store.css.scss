@@ -11,14 +11,18 @@
 }
 
 .entry{
+  position:relative;
   overflow:auto;
   margin-top: 1em;
+  padding:0 0 0 90px;
   border-bottom:1px dotted #77d;
   min-height:100px;
   img{
     width:80px;
     margin:0 5px 5px 0;
     position:absolute;
+    top:0;
+    left:0;
   }
   
 }
