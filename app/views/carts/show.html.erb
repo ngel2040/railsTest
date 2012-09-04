@@ -5,10 +5,10 @@
 <h2>Your Pragmatice Cart</h2>
 <ul>
   <% @cart.line_items.each do |item| %>
-    <li><%= item.quantity %> &times; <%= item.product.title %></li>
+    <li><%= item.quantity %> &times; <%= item.product.title %> : <%= number_to_currency(item.total_price) %></li>
   <% end %>
 </ul>
-
-
+<p>total: <%= number_to_currency(@cart.total_price) %></p>
+<%= button_to 'Empty cart', @cart, method: :delete, confirm: 'are you sure?' %>
 <%= link_to 'Edit', edit_cart_path(@cart) %> |
 <%= link_to 'Back', carts_path %>
