@@ -1,60 +1,68 @@
-
-// c문법 좀 보고봐야겠음.
 function ArrayList() {
-    this.list = [];
+    this.arr;
     this.numOfData;
     this.currentPostion;
 }
-ArrayList.prototype.insert = function() {
-    this.lists.push(arguments[0]);
-    return this.lists;
+ArrayList.prototype.init = function() {
+    this.arr = [];
+    this.numOfData = 0;
+    this.currentPostion = -1;
 };
-ArrayList.prototype.first = function() {
-    this.data = this.lists[0];
-    this.dataAdrress = 0;
-    return this.data;
+ArrayList.prototype.insert = function(data) {
+    this.arr[this.numOfData] = data;
+    this.numOfData++;
 };
-ArrayList.prototype.next = function() {
-    if (this.dataAdrress == undefined) return -1;
-    return this.lists[this.dataAdrress++];
+ArrayList.prototype.first = function(pdata) {
+    if(this.numOfData == 0) return;
+    this.currentPostion = 0;
+    pdata['0'] = this.arr[0];
+    return true;
 };
-ArrayList.prototype.remove = function(address) {
-    if (address) {
-        this.lists.splice(address, 1);
-        return this.lists;
-    } else {
-        return this.lists.pop();    
-    }
+ArrayList.prototype.nexts = function(pdata) {
+    if (this.currentPostion >= (this.numOfData - 1)) return false;
+    this.currentPostion++;
+    pdata[this.currentPostion] = this.arr[this.currentPostion];
+    return true;
+};
+ArrayList.prototype.remove = function() {
+    var result = this.arr.splice(this.currentPostion, 1);
+    this.numOfData--;
+    this.currentPostion--;
+    return result;
 };
 ArrayList.prototype.count = function() {
-    return this.lists.length;
+    return this.list.numOfData;
 };
 
 
 (function() {
-    var lists, cnt;
-    lists = new List;
+    var lists, data, cnt;
+    data = {};
+    lists = new ArrayList();
 
-    lists.lInsert(11);
-    lists.lInsert(11);
-    lists.lInsert(22);
-    lists.lInsert(22);
-    lists.lInsert(33);
+    lists.init();
 
-    cnt = lists.lCount()
-    console.log('count', cnt);
 
-    console.log('first', lists.lFirst());
+    lists.insert(11);
+    lists.insert(11);
+    lists.insert(22);
+    lists.insert(22);
+    lists.insert(33);
 
-    for(var i = 0; i < cnt; i++){
-        console.log('next', lists.lNext());
+    if (lists.first(data)) {
+        console.log('first', data[lists.currentPostion]);
+        while(lists.nexts(data)) {
+            console.log('next', data[lists.currentPostion]);
+        }
     }
 
-    console.log(lists.lFirst());
+    if (lists.first(data)) {
+        if (data[lists.currentPostion] == 22) lists.remove();
 
-    for(var i = 0; i < cnt; i++){
-        if(lists.lists[i] == 22) lists.lRemove(i);
+        while(lists.nexts(data)) {
+            if (data[lists.currentPostion] == 22) lists.remove();
+        }
     }
-    console.log('remove', lists.lists)
-    
+    console.log(lists.arr)
+
 })();
