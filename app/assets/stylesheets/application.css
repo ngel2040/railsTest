@@ -11,4 +11,3 @@
  *= require_self
  *= require_tree .
  */
- .side{position: fixed; top:10px; right:10px; border:3px solid #99f; background: #fff}

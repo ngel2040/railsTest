@@ -2,27 +2,17 @@
 <html>
 <head>
   <title>RailsTest</title>
-  <%= stylesheet_link_tag    "application" %>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= csrf_meta_tags %>
+  <%= yield :more_style %>
 </head>
 <body>
-<div class="wrap <%= controller.controller_name %>">
-  <h1 class="logo"><a href="/">Store</a></h1>
-  <div id="columns">
-    <ul>
-      <li><a href="">home</a></li>
-      <li><a href="">questions</a></li>
-      <li><a href="">news</a></li>
-      <li><a href="">contact</a></li>
-    </ul>
-  </div>
-  <div class="side">
-    <%= render @cart %>
-  </div>
-  <%= yield %>
-</div>
-<%= javascript_include_tag "jquery-1.8.0" %>
+
+<%= yield %>
+
+<%= javascript_include_tag "jquery-1.8.1.min" %>
 <%= javascript_include_tag "underscore" %>
 <%= javascript_include_tag "backbone" %>
+<%= yield :more_script %>
 </body>
 </html>
