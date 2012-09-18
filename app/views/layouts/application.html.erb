@@ -7,7 +7,7 @@
 </head>
 <body>
 <div class="wrap <%= controller.controller_name %>">
-  <h1 class="logo">Store</h1>
+  <h1 class="logo"><a href="/">Store</a></h1>
   <div id="columns">
     <ul>
       <li><a href="">home</a></li>
@@ -15,6 +15,9 @@
       <li><a href="">news</a></li>
       <li><a href="">contact</a></li>
     </ul>
+  </div>
+  <div class="side">
+    <%= render @cart %>
   </div>
   <%= yield %>
 </div>
