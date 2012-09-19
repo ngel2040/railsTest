@@ -3,6 +3,8 @@
 <head>
   <title>RailsTest</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
+  <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap-responsive.min.css">
   <%= csrf_meta_tags %>
   <%= yield :more_style %>
 </head>
@@ -13,6 +15,7 @@
 <%= javascript_include_tag "jquery-1.8.1.min" %>
 <%= javascript_include_tag "underscore" %>
 <%= javascript_include_tag "backbone" %>
+<script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
 <%= yield :more_script %>
 </body>
 </html>

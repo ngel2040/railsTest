@@ -1,5 +1,7 @@
 RailsTest::Application.routes.draw do
-  match 'jsTest' => 'jsTest#index'
+  resources :back_bone_tests
+
+  match 'dataStructure' => 'dataStructure#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

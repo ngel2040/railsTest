@@ -57,10 +57,10 @@ ArrayList.prototype.count = function() {
     }
 
     if (lists.first(data)) {
-        if (data[lists.currentPostion] == 22) lists.remove();
+        data[lists.currentPostion] == 22 && lists.remove();
 
         while(lists.nexts(data)) {
-            if (data[lists.currentPostion] == 22) lists.remove();
+            data[lists.currentPostion] == 22 && lists.remove();
         }
     }
     console.log(lists.arr)

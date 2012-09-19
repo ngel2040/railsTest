@@ -1,0 +1,46 @@
+<h1>Listing back_bone_tests</h1>
+
+<div id="todoWrap" class="container">
+  <h2>todo list</h2>
+  
+  <div class="formWrap">
+      <input type="text" id="input"><button id="addItem" data-click="addItemFilter">추가</button>
+  </div>
+
+  <div class="lists" id="listsWrap">
+    
+  </div>
+  <script type="text/html" id="add_tmpl">
+    <li>
+      <span class="title">{{= ToDo }}</span>
+      <span class="time">{{= updated_at }}</span>
+      <button type="button" id="done">완료</button>
+      <button type="button" id="del">삭제</button>
+    </li>
+  </script>
+</div>
+
+<% @back_bone_tests.each do |back_bone_test| %>
+  <tr>
+    <td><%= back_bone_test.ToDo %></td>
+    <td><%= link_to 'Show', back_bone_test %></td>
+    <td><%= link_to 'Edit', edit_back_bone_test_path(back_bone_test) %></td>
+    <td><%= link_to 'Destroy', back_bone_test, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+
+
+<br />
+
+<%= link_to 'New Back bone test', new_back_bone_test_path %>
+
+<% content_for :more_script do %>
+<%= javascript_include_tag "back_bone_tests" %>
+<script type="text/javascript">
+  var lists = <%= @back_bone_tests.to_json.html_safe %>
+  console.log(lists);
+  var todo_view = new Todo_view;
+  todo_view.addItem(lists)
+  
+</script>
+<% end %>
