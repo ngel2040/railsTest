@@ -2,6 +2,7 @@ RailsTest::Application.routes.draw do
   resources :back_bone_tests
 
   match 'dataStructure' => 'dataStructure#index'
+  match 'hello' => 'hello#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -52,7 +53,8 @@ RailsTest::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   # root :to => 'welcome#index'
-
+  root :to => 'hello#index'
+  
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.

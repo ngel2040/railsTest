@@ -38,9 +38,7 @@
 <%= javascript_include_tag "back_bone_tests" %>
 <script type="text/javascript">
   var lists = <%= @back_bone_tests.to_json.html_safe %>
-  console.log(lists);
   var todo_view = new Todo_view;
-  todo_view.addItem(lists)
-  
+  todo_view.addItem(lists);
 </script>
 <% end %>

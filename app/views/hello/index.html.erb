@@ -1,0 +1,12 @@
+<%= link_to 'backbone', back_bone_tests_path %><br>
+<%= link_to 'datastructure', dataStructure_path %>
+
+<div id="origin_data" style="display:none;"><%= @my_data %></div>
+
+<% content_for :more_script do %>
+<%= javascript_include_tag "hello" %>
+<script type="text/javascript">
+	var a = new aa_view({model: new aa_model });
+	a.setOriginData($('#origin_data').text());
+</script>
+<% end %>
