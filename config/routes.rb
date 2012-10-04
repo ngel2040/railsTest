@@ -3,6 +3,8 @@ RailsTest::Application.routes.draw do
 
   match 'dataStructure' => 'dataStructure#index'
   match 'hello' => 'hello#index'
+  match 'canvas' => 'canvas#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

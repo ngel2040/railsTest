@@ -1,0 +1,14 @@
+ <% content_for :more_style do %>
+<style type="text/css">
+	body{background: #ddd;}
+	#canvas{margin:10px; padding:10px; background: #fff; border:thin inset #aaa;}
+</style>
+ <% end %>
+
+<canvas id="canvas" width="500" height="300"></canvas>
+
+ <% content_for :more_script do %>
+<%= javascript_include_tag "canvas" %>
+<script type="text/javascript">
+</script>
+<% end %>
