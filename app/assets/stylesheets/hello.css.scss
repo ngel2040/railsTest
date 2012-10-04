@@ -1,3 +1,14 @@
-// Place all the styles related to the hello controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.arche{
+	font-family:'맑은고딕';
+	h2{
+		h1 {
+			font-size:20px;
+			line-height:25px;
+		}
+		.article_info{
+			color:#888;
+			font-size:12px;
+			img{display:none;}
+		}
+	}
+}
