@@ -1,6 +1,15 @@
 class BackBoneTestsController < ApplicationController
   # GET /back_bone_tests
   # GET /back_bone_tests.json
+
+  def s_01
+    
+  end
+
+  def s_02
+    
+  end
+  
   def index
     @back_bone_tests = BackBoneTest.all
 

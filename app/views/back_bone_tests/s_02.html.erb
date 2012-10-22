@@ -1,0 +1,116 @@
+<% content_for :more_style do %>
+<link rel="stylesheet" href="http://localhost:4000/css/obt/common/common.css">
+<link rel="stylesheet" href="http://localhost:4000/css/obt/main/main.css">
+<style type="text/css">
+body{background: #fff;}
+.section{
+  width: 607px;
+}
+</style>
+<% end %>
+
+<div class="section home">
+  <h1>캐릭터 홈</h1>
+  <section class="cmt_comm">
+    <div class="cmt_more">
+      <a href="">이전 댓글 보기</a>
+    </div>
+    <ul class="list_cmt">
+      <li>
+
+        <!-- 캐릭터 이름 및 정보 -->
+        <span class="character_card">
+          <a href="#" class="character_name">
+            <i class="ico_comm reporter_aa" title="아키기자단"></i>
+            <i class="ico_comm admin_a" title=""></i>
+            <i class="ico_exped level_1"></i>
+            <strong>캐릭터이름캐릭터이름들감</strong>
+            <img src="http://i2.search.daumcdn.net/image03.search/03/hwUILRz9WROugNZdzto1pW3HXMAVSZk64Ny48oXb0f9" alt="" class="character_thumb">
+          </a>
+          <i class="space_server"></i>
+          <span class="character_server">@키프로사</span>
+          <!-- character info -->
+          <i class="space_sub"></i>
+          <span class="character_sub">
+            <span class="level">
+              <span class="bar">|</span>
+              <span>50레벨</span>
+            </span>
+            <span class="job">
+              <span class="bar">|</span>
+              <span>초원의 감시자</span>
+            </span>
+            <span class="race">
+              <span class="bar">|</span>
+              <span>하리하란</span>
+            </span>
+          </span>
+          <!-- //end character info -->
+          <!-- user layer -->
+          <div class="character_layer">
+          </div>
+          <!-- //end user layer -->
+        </span>
+
+        타양은 수 년 동안 초원 곳곳을 떠돌았다. <a href="www.argeage.com">www.argeage.com</a> 한 곳에 오래 머무르는 것을 피했기 때문에 부족이나 루한마라에게 위치가 알려지는 일은 없었다. 
+        <span class="time">2012-03-25 22:57</span>
+
+        <div class="util_cmt">
+          <a href="#" role="button" title="신고">
+          <i class="ico_comm report2"></i>
+          <span class="txt_hidden">신고</span>
+          </a>
+          <a href="#" role="button" title="삭제">
+          <i class="ico_comm delete"></i>
+          <span class="txt_hidden">삭제</span>
+          </a>
+        </div>
+
+      </li>
+    </ul>
+    <form class="form_cmt">
+      <!-- character select box -->
+      <div class="sel_comm character open">
+
+        <a href="#" role="button" class="btn btn_sel">
+          <span class="txt">
+            <strong>대너리스</strong>
+            <span class="server">@키프로사</span>
+          </span>
+          <span class="box_arrow">
+            <i class="arrow"></i>
+          </span>
+        </a>
+        
+        <!-- chracter list -->
+        <div class="layer_list">
+          <!-- <ul class="list">
+            <li>
+              <a href="#">
+                <strong>대너리스</strong>
+                <span class="server">@키프로사</span>
+              </a>
+            </li>
+          </ul> -->
+        </div>
+        <!-- //end chracter list -->
+      </div>
+      <!-- //end character select box -->
+      <div class="inp_wrap">
+        <textarea class="inp_txt"></textarea>
+        <button type="submit" class="btn save">저장</button>
+      </div>
+    </form>
+  </section>
+</div>
+
+<script type="text/html" id="main_gird_tmpl">
+
+</script>
+
+<% content_for :more_script do %>
+<%= javascript_include_tag "back_bone_tests" %>
+<script type="text/javascript">
+
+</script>
+<% end %>

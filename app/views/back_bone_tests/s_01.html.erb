@@ -1,0 +1,192 @@
+<% content_for :more_style do %>
+<link rel="stylesheet" href="http://localhost:4000/css/obt/common/common.css">
+<link rel="stylesheet" href="http://localhost:4000/css/obt/main/main.css">
+<style type="text/css">
+a:hover{background: none !important;}
+.basic_layout{border:1px solid #f00;}
+</style>
+<% end %>
+<div id="masthead">
+  <div id="navi" style="background:#000">
+    
+    <div class="menu">
+      <ul class="gnb">
+        <li class="maingnb" id="maingnb_01" data-mouse="toggle_submenu">
+        <a class="lv1" data-click="selected_submenu" href="#">플레이</a>
+        <div id="sub_gnb_1" class="subgnb sub_1">
+          <ul>
+            <li><a href="#">캐릭터</a></li>
+            <li><a href="#">원정대</a></li>
+            <li><a href="#">숫자로 보는 아키에이지</a></li>
+          </ul>
+          <i class="ico_comm gnbtail"></i>
+        </div>
+        </li>
+        <li class="maingnb" id="maingnb_02" data-mouse="toggle_submenu">
+        <a class="lv1" data-click="selected_submenu" href="#">아키이야기</a>
+        <div id="sub_gnb_2" class="subgnb sub_2">
+          <ul>
+            <li><a href="#">플레이일지</a></li>
+            <li><a href="#">열린게시판</a></li>
+            <li><a href="#">팬아트</a></li>
+          </ul>
+          <i class="ico_comm gnbtail"></i>
+        </div>
+        </li>
+        <li class="maingnb" id="maingnb_03" data-mouse="toggle_submenu">
+        <a class="lv1" data-click="selected_submenu" href="#">게임가이드</a>
+        <div id="sub_gnb_3" class="subgnb sub_3">
+          <ul>
+            <li><a href="#">아키위키</a></li>
+            <li><a href="#">게임정보</a></li>
+            <li><a href="#">카툰</a></li>
+            <li><a href="#">멀티미디어</a></li>
+            <li><a href="#">팬사이트킷</a></li>
+            <li><a href="#">아키인사이드</a></li>
+          </ul>
+          <i class="ico_comm gnbtail"></i>
+        </div>
+        </li>
+        <li class="maingnb" id="maingnb_04" data-mouse="toggle_submenu">
+        <a class="lv1" data-click="selected_submenu" href="#">소식</a>
+        <div id="sub_gnb_4" class="subgnb sub_4">
+          <ul>
+            <li><a href="#">공지</a></li>
+            <li><a href="#">패치노트</a></li>
+            <li><a href="#">이벤트</a></li>
+            <li><a href="#">개발노트</a></li>
+          </ul>
+          <i class="ico_comm gnbtail"></i>
+        </div>
+        </li>
+        <li class="maingnb" id="maingnb_05" data-mouse="toggle_submenu">
+        <a class="lv1" data-click="selected_submenu" href="#">테스트참여</a>
+        <div id="sub_gnb_5" class="subgnb sub_5">
+          <ul>
+            <li><a class="active" href="#">테스트안내</a></li>
+            <li><a href="#">테스트신청</a></li>
+            <li><a href="#">조작법</a></li>
+            <li><a href="#">1:1문의</a></li>
+            <li><a href="#">버그신고</a></li>
+            <li><a href="#">설치접속문의</a></li>
+          </ul>
+          <i class="ico_comm gnbtail"></i>
+        </div>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<div class="wrap_main" style="margin-left:250px;">
+<!--  -->
+</div>
+<script type="text/html" id="main_gird_tmpl">
+	<article id="" class="basic_layout">
+		<div class="[[= type ]]">
+			<a href="[[= contents.link ]]">
+
+				<h2>[[=contents.h2]]</h2>
+				<small class="article_info">
+					<strong class="author">[[=contents.author]]</strong>
+					<span class="txt_bar"> | </span>
+					<span class="time">[[=contents.time]]</span>
+					<i class="ico_comm comment"></i>
+					<span class="txt_hidden">댓글</span>
+					<em class="count">[[=contents.comment_cnt]]</em>
+				</small>
+				
+				[[ if (type == 'cont_bigimg') { ]]
+				<div class="cont_img">
+					<img src="[[=contents.imgSrc]]" alt="">
+				</div>
+				[[ } else if (type == 'cont_noimg') { ]]}
+				<div class="sub">
+					[[=contents.sub]]
+				</div>
+				[[ } else if (type == 'cont_basic') { ]]}
+				<div class="cont_img">
+					<img src="[[=contents.imgSrc]]" alt="">
+					<div class="sub">
+						[[=contents.sub]]
+					</div>
+				</div>
+				[[ } ]]
+
+			</a>
+		</div>
+	</article>
+</script>
+
+<% content_for :more_script do %>
+<%= javascript_include_tag "back_bone_tests" %>
+<script type="text/javascript" src="https://raw.github.com/desandro/masonry/master/jquery.masonry.js"></script>
+<script type="text/javascript">
+var data = [
+  {
+    "type": "cont_bigimg",
+    "contents": {
+      "link": "http://board.archeage.com/free/518755",
+      "h2": "오빤 아키 스타일~",
+      "author": "로드오브휴먼",
+      "time" : "2012-08-23",
+      "comment_cnt": "115",
+      "imgSrc": "http://static.archeage.com/mankey/kangnamstyle.jpg"
+    }
+  },
+  {
+    "type": "cont_noimg",
+    "contents": {
+      "link": "http://board.archeage.com/free/530896",
+      "h2": "[UCC] 아키에이지는 아주 경이롭습니다(Archeage Boom de yada)",
+      "author": "효과음",
+      "time" : "2012-09-05",
+      "comment_cnt": "18",
+      "sub": "[1편 : 아키에이지는 아주 경이롭습니다]http://youtu.be/IwxLnLcEDYk* 음향 조절을 부탁드리며, 이 UCC는 1920*1080 해상도에 최적화된 영상입니다. 그리고 화질 설정을 해주시기..."
+    }
+  },
+  {
+    "type": "cont_basic",
+    "contents": {
+      "link": "http://board.archeage.com/free/525011",
+      "h2": "UCC 아키에이지는 아주 경이롭습니다(Archeage Boom de yada)",
+      "author": "효과음",
+      "time" : "2012-08-29",
+      "comment_cnt": "2",
+      "imgSrc": "http://static.archeage.com/etc/ucc2.jpg",
+      "sub": "안녕하세요!저의소개를 하자면, 저는 UCC기네스로 활동해온 효과음입니다.먼저, 글을 쓰게 된 이유는, 많은 유저분들의..."
+    }
+  },
+  {
+    "type": "cont_bigimg",
+    "contents": {
+      "link": "http://board.archeage.com/free/524729",
+      "h2": "스페이드 원정대 마을 건설기",
+      "author": "칩모",
+      "time" : "2012-08-28",
+      "comment_cnt": "2",
+      "imgSrc": "http://www.archeage.com/attachments/crop/1349850723530_crop.jpg"
+    }
+  },
+  {
+  	"type": "cont_noimg",
+    "contents": {
+      "link": "http://board.archeage.com/free/524538",
+      "h2": "개인으로 중형집 도전 성공.!",
+      "author": "하후마",
+      "time" : "2012-08-28",
+      "comment_cnt": "2",
+      "sub": "중형집을 완성했습니다.델피별 150개짜리 2층테라스집입니다.총 소요 재료는 철광석 1500개 암석 4500개 통나무 1500개 이고. 채집을 제외한 가공에 든 노동력만 1차가공 = 2500 , 2차 꾸러미가공 = 125 , 3차..."
+    }
+  }
+];
+var main_grid_view = new Main_grid_view({
+	model: new Main_grid_model(data)
+});
+
+var menu_view = new Menu_view({
+  model: new Menu_model()
+});
+</script>
+<% end %>

@@ -1,9 +1,13 @@
 RailsTest::Application.routes.draw do
+  resources :html5games
+
   resources :back_bone_tests
 
+  match 'backbonetest/:action' => 'back_bone_tests'
   match 'dataStructure' => 'dataStructure#index'
   match 'hello' => 'hello#index'
   match 'canvas' => 'canvas#index'
+  match 'video_swf' => 'videoSwf#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

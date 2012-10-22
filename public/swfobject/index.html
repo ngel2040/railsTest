@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+	<head>
+		<title>SWFObject 2 static publishing example page</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<style type="text/css">
+			html, body{margin:0; padding:0; height:100%;}
+			.cont{
+				position:absolute;
+				top: 0;
+				right:0;
+				bottom:0;
+				left:0;
+				z-index: 100;
+			}
+		</style>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+		<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+	    <script type="text/javascript">
+	      google.load("swfobject", "2.1");
+	    </script>
+	</head>
+	<body>
+		<div id="videoDiv">Loading...</div>
+		<div class="cont">
+			<button type="button" id="playBtn">play</button>
+			<div style="font-size:25px; font-weight:bold; text-shadow:0 0 5px #f0f;">
+				Does anyone have experience embedding flash with swfobject? Dynamic publishing worked as expected, but using their static publishing method, I couldn't control the player programmatically. Here's a description of what I tried<br>
+
+What steps will reproduce the problem?<br>
+
+Embed video using static publishing method from here: http://code.google.com/p/swfobject/wiki/documentation
+use registerObject with a callback to capture the reference to the object
+try to use any of the methods from the youtube api such as loadVideoById() or play() https://developers.google.com/youtube/js_api_reference
+those methods are undefined in the object reference returned in the callback passed to registerObject
+What is the expected output? What do you see instead? these methods work if I use dynamic publishing I was expecting to be able to use all of the methods listed here just as I can with the dynamic publishing method.<br>
+
+What version of the product are you using? On what operating system? 2.2 mac osx firefox and chrome<br>
+
+Please provide any additional information below.<br>
+
+code snippets:<br>
+			</div>
+		</div>
+		<script type="text/javascript">
+		var videoID = "ylLzyHk54Z0"
+		// Lets Flash from another domain call JavaScript
+		var params = { allowScriptAccess: "always", wmode: 'transparent' };
+		// The element id of the Flash embed
+		var atts = { id: "ytPlayer" };
+		var clientX = $('body').width() -  10;
+		var clientY = $('body').height() -10;
+		console.log(clientX, clientY)
+		// All of the magic handled by SWFObject (http://code.google.com/p/swfobject/)
+		swfobject.embedSWF("http://www.youtube.com/v/" + videoID + "?version=3&enablejsapi=1&playerapiid=player1&controls=0&showinfo=0", "videoDiv", clientX, clientY, "9", null, null, params, atts);
+
+		function onYouTubePlayerReady(e) {
+			ytplayer = document.getElementById("ytPlayer");
+			ytplayer.playVideo();
+			
+		}
+
+		</script>
+	</body>
+</html>
