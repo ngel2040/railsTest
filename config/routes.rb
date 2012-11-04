@@ -6,6 +6,7 @@ RailsTest::Application.routes.draw do
   match 'backbonetest/:action' => 'back_bone_tests'
   match 'dataStructure' => 'dataStructure#index'
   match 'hello' => 'hello#index'
+  match 'dragevent' => 'dragevent#index'
   match 'canvas' => 'canvas#index'
   match 'video_swf' => 'videoSwf#index'
 

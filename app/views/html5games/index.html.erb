@@ -17,5 +17,63 @@
 </table>
 
 <br />
+<canvas id="stage"></canvas>
+
+<div style="display:none;">
+<img src="http://img1.archeage.com/resources-201210251042/beta/images/m/home.png" alt="" id="dot">  
+</div>
+
 
 <%= link_to 'New Html5game', new_html5game_path %>
+<%= javascript_include_tag "TweenLite" %>
+<%= javascript_include_tag "html5games" %>
+<% content_for :more_script do %>
+<script type="text/javascript">
+var s52;
+function stop(){
+  s52.Stage.end();
+}
+function start(){
+  var i, bitmap, img, w, h, r;
+  
+  s52 = init();
+  
+  img = document.getElementById( 'dot' );
+
+  w = s52.Stage.width * .5;
+  h = s52.Stage.height * .5;
+  r = Math.sqrt( w*w + h*h );
+    
+  i = 1000;
+  while(i--){
+    bitmap = s52.Bitmap( img, 1, 1 );
+    s52.Stage.addChild( bitmap.set( 'x', w, 'y', h ) );
+    tween( bitmap );
+  }
+
+  function tween( $child ){
+    var a;
+    a = Math.random() * Math.PI * 2;
+    TweenLite.to(
+      $child.set( 'x', w, 'y', h, 'width', 1, 'height', 1 ),
+      Math.random() * .75,
+      {
+        x:Math.cos(a) * r + w, y:Math.sin(a) * r + h, width:32, height:32,
+        ease:Cubic.easeIn, overwrite:"none", onComplete:tween, onCompleteParams:[$child]
+      }
+    );
+  }
+  function move( $e ){
+    w = $e.pageX;
+    h = $e.pageY;
+  }
+  s52.Stage.addEventListener( 'mousedown', move ); //DOM의 이벤트 아님
+
+  start = function(){
+    s52.Stage.start(); //한번 호출뒤에 start함수를 변경한다.
+  };
+
+  start();
+}
+</script>
+<% end %>

@@ -1,0 +1,22 @@
+INTRODUCTION
+---------------
+
+This is an application to demonstrate the good things that Backbone JS has to offer such as Model-View structure, event binding, subscriber/observer pattern, dependency injection, seperation of concern etc...
+
+The example uses Ruby 1.9.2, Sinatra, jQuery and Handlebars template
+
+The live example can be found at http://backbone-hangman.heroku.com
+
+I've also written a blog post which explains how everything works here http://trivektor.wordpress.com/2012/01/15/redo-the-classic-hangman-game-with-a-new-approach-backbone-js/
+
+HOW TO USE
+---------------
+
+* Clone from Github
+* Install the Sinatra gem (bundle install)
+* Run ruby -rubygems hangman.rb
+
+FEEDBACK
+---------------
+
+Comments and suggestions are welcome

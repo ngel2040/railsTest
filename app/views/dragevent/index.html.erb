@@ -1,0 +1,65 @@
+<% content_for :more_style do %>
+<style type="text/css">
+	.wrap{overflow:hidden;}
+	.item{float:left; margin:5px;
+		width:20px;
+		height:20px;
+		border:1px solid #f00;
+	}
+	.item.active{
+		background: #000;
+	}
+	.item.dropped{
+		background: #f0f;
+	}
+	.selection {
+	position: absolute;
+	border: 1px solid #89B;
+	background: #BCE;
+	background-color: #BEC;
+	border-color: #8B9;
+	}
+</style>
+<% end %>
+
+<div class="wrap">
+	<% 1000.times.each do |i| %>
+	<div class="item item_0<%= i %>"></div>
+	<% end %>
+</div>
+<% content_for :more_script do %>
+<script type="text/javascript" src="/js/jquery.event.drag-2.2.js"></script>
+<script type="text/javascript" src="/js/jquery.event.drop-2.2.js"></script>
+<script type="text/javascript">
+	$('.item')
+		.drag("start",function( ev, dd ){
+			return $('<div class="selection" />')
+				.css('opacity', .65 )
+				.appendTo( document.body );
+		})
+		.drag(function( ev, dd ){
+			$( dd.proxy ).css({
+				top: Math.min( ev.pageY, dd.startY ),
+				left: Math.min( ev.pageX, dd.startX ),
+				height: Math.abs( ev.pageY - dd.startY ),
+				width: Math.abs( ev.pageX - dd.startX )
+			});
+		})
+		.drag("end",function( ev, dd ){
+			$( dd.proxy ).remove();
+		});
+
+	$('.item')
+		.drop("start",function(){
+			$( this ).addClass("active");
+		})
+		.drop(function( ev, dd ){
+			$( this ).toggleClass("dropped");
+		})
+		.drop("end",function(){
+			$( this ).removeClass("active");
+		});
+
+	$.drop({ multi: true });
+</script>
+<% end %>
