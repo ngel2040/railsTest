@@ -2,11 +2,23 @@ class BackBoneTestsController < ApplicationController
   # GET /back_bone_tests
   # GET /back_bone_tests.json
 
+  def test
+    
+  end
+
   def s_01
     
   end
 
+  def b
+    
+  end
+
   def s_02
+    
+  end
+
+  def s_03
     
   end
   

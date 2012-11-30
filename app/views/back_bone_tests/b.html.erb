@@ -1,0 +1,67 @@
+<div id="slide_wrap">
+	<div id="gnb"></div>
+	<div class="loading">
+		load...
+	</div>
+</div>
+
+<script type="text/html" id="nav_list_tmpl">
+	<li><a href="#" class="prev">prev</a></li>
+	{{ for (var i = 0; i < len; i++) { }}
+	<li><a href="#{{= i }}">{{= i }}</a></li>
+	{{ } }}
+	<li><a href="#" class="next">next</a></li>
+</script>
+
+<script type="text/html" id="sub_content_tmpl">
+	<div class="sub_content_inner">
+		
+	</div>
+</script>
+
+<script type="text/html" id="sub_0_tmpl">
+<div class="scroll_wrap">
+	{{ for (var i = 0; i < 3; i++) { }}
+		<div class="scroll_item item_{{= i }}">
+			<div class="obj obj_0">{{= i }}</div>
+			<div class="obj obj_1">{{= i }}</div>
+			<div class="obj obj_2">{{= i }}</div>
+		</div>
+	{{  } }}
+</div>	
+</script>
+
+<script type="text/html" id="sub_0_tmpl">
+<div class="scroll_wrap">
+	<div class="scroll_item"></div>
+</div>	
+</script>
+<script type="text/html" id="sub_1_tmpl">
+<div class="scroll_wrap">
+	
+	<div class="scroll_item"></div>
+</div>	
+</script>
+<script type="text/html" id="sub_2_tmpl">
+<div class="scroll_wrap">
+	
+	<div class="scroll_item"></div>
+</div>	
+</script>
+<script type="text/html" id="sub_3_tmpl">
+<div class="scroll_wrap">
+	
+	<div class="scroll_item"></div>
+</div>	
+</script>
+
+<% content_for :more_script do %>
+<%= javascript_include_tag "swipeview" %>
+<%= javascript_include_tag "ender" %>
+<%= javascript_include_tag "jquery.mousewheel.min" %>
+<%= javascript_include_tag "keymaster.min" %>
+<%= javascript_include_tag "b" %>
+<script type="text/javascript">
+	new view({model: new model});
+</script>
+<% end %>
