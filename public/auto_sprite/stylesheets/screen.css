@@ -1,0 +1,718 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 17, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 30, ../sass/screen.scss */
+.sprite, .add, .add_del, .addfile, .admin_a, .alert, .arrow, .arrow2, .arrow_down, .arrow_down2, .arrow_up, .big_vote_down, .big_vote_up, .bottom_view, .box_arrow_down, .bronze, .cancel_target_comment, .close, .close2, .close_card, .close_view, .close_x, .comment, .coupon, .coupon_txt, .delete, .delete1, .delete2, .download_gray, .download_white, .exp, .exp_txt, .fb, .fb_small, .gnbtail, .gold, .home, .home_txt, .ico_aa, .ico_aa_on, .img, .isearch, .list_vote_down, .list_vote_up, .location_point, .lock, .lst_top, .m2, .m2_small, .more, .more_dark, .msg, .msg_txt, .new, .next, .next_inert, .noti, .noti_txt, .open_view, .place, .plus, .prev, .prev_inert, .process, .realtime_ranking_down, .realtime_ranking_up, .reload, .reply, .report, .report2, .reporter, .reporter_aa, .security, .silver, .stats_arrow_down, .stats_arrow_up, .sure, .tag_next, .tag_prev, .tag_start, .taglabel, .target_comment, .thumb_del, .top_view, .tw, .txt_craftsman, .txt_practice, .txt_probationary, .txt_specialty, .vote_down, .vote_up {
+  background-image: url('/public/images/sprite-s3c64b3aea0.png');
+  background-repeat: no-repeat;
+}
+
+/* line 36, ../sass/screen.scss */
+.add {
+  background-position: 0 -84px;
+}
+
+/* line 36, ../sass/screen.scss */
+.add_del {
+  background-position: 0 -28px;
+}
+
+/* line 36, ../sass/screen.scss */
+.addfile {
+  background-position: 0 -140px;
+}
+
+/* line 36, ../sass/screen.scss */
+.admin_a {
+  background-position: -16px -337px;
+}
+
+/* line 36, ../sass/screen.scss */
+.alert {
+  background-position: 0 -156px;
+}
+
+/* line 36, ../sass/screen.scss */
+.arrow {
+  background-position: 0 -18px;
+}
+
+/* line 36, ../sass/screen.scss */
+.arrow2 {
+  background-position: -9px 0;
+}
+
+/* line 36, ../sass/screen.scss */
+.arrow_down {
+  background-position: 0 0;
+}
+
+/* line 36, ../sass/screen.scss */
+.arrow_down2 {
+  background-position: 0 -35px;
+}
+
+/* line 36, ../sass/screen.scss */
+.arrow_up {
+  background-position: -15px 0;
+}
+
+/* line 36, ../sass/screen.scss */
+.big_vote_down {
+  background-position: -13px -501px;
+}
+
+/* line 36, ../sass/screen.scss */
+.big_vote_up {
+  background-position: -14px -479px;
+}
+
+/* line 36, ../sass/screen.scss */
+.bottom_view {
+  background-position: -24px -28px;
+}
+
+/* line 36, ../sass/screen.scss */
+.box_arrow_down {
+  background-position: 0 -458px;
+}
+
+/* line 36, ../sass/screen.scss */
+.bronze {
+  background-position: 0 -353px;
+}
+
+/* line 36, ../sass/screen.scss */
+.cancel_target_comment {
+  background-position: -19px -84px;
+}
+
+/* line 36, ../sass/screen.scss */
+.close {
+  background-position: 0 -545px;
+}
+
+/* line 36, ../sass/screen.scss */
+.close2 {
+  background-position: -9px -9px;
+}
+
+/* line 36, ../sass/screen.scss */
+.close_card {
+  background-position: 0 -57px;
+}
+
+/* line 36, ../sass/screen.scss */
+.close_view {
+  background-position: -24px 0;
+}
+
+/* line 36, ../sass/screen.scss */
+.close_x {
+  background-position: -17px -523px;
+}
+
+/* line 36, ../sass/screen.scss */
+.comment {
+  background-position: -12px -289px;
+}
+
+/* line 36, ../sass/screen.scss */
+.coupon {
+  background-position: -15px -156px;
+}
+
+/* line 36, ../sass/screen.scss */
+.coupon_txt {
+  background-position: -11px -35px;
+}
+
+/* line 36, ../sass/screen.scss */
+.delete {
+  background-position: -18px -274px;
+}
+
+/* line 36, ../sass/screen.scss */
+.delete1 {
+  background-position: 0 -305px;
+}
+
+/* line 36, ../sass/screen.scss */
+.delete2 {
+  background-position: 0 -9px;
+}
+
+/* line 36, ../sass/screen.scss */
+.download_gray {
+  background-position: -16px -70px;
+}
+
+/* line 36, ../sass/screen.scss */
+.download_white {
+  background-position: -12px -126px;
+}
+
+/* line 36, ../sass/screen.scss */
+.exp {
+  background-position: 0 -439px;
+}
+
+/* line 36, ../sass/screen.scss */
+.exp_txt {
+  background-position: -9px -46px;
+}
+
+/* line 36, ../sass/screen.scss */
+.fb {
+  background-position: 0 -614px;
+}
+
+/* line 36, ../sass/screen.scss */
+.fb_small {
+  background-position: 0 -421px;
+}
+
+/* line 36, ../sass/screen.scss */
+.gnbtail {
+  background-position: -8px -99px;
+}
+
+/* line 36, ../sass/screen.scss */
+.gold {
+  background-position: -18px -353px;
+}
+
+/* line 36, ../sass/screen.scss */
+.home {
+  background-position: 0 -274px;
+}
+
+/* line 36, ../sass/screen.scss */
+.home_txt {
+  background-position: -30px -35px;
+}
+
+/* line 36, ../sass/screen.scss */
+.ico_aa {
+  background-position: 0 -523px;
+}
+
+/* line 36, ../sass/screen.scss */
+.ico_aa_on {
+  background-position: -13px -305px;
+}
+
+/* line 36, ../sass/screen.scss */
+.img {
+  background-position: -20px -112px;
+}
+
+/* line 36, ../sass/screen.scss */
+.isearch {
+  background-position: -15px -439px;
+}
+
+/* line 36, ../sass/screen.scss */
+.list_vote_down {
+  background-position: -24px -140px;
+}
+
+/* line 36, ../sass/screen.scss */
+.list_vote_up {
+  background-position: -9px -140px;
+}
+
+/* line 36, ../sass/screen.scss */
+.location_point {
+  background-position: -30px -57px;
+}
+
+/* line 36, ../sass/screen.scss */
+.lock {
+  background-position: -21px -458px;
+}
+
+/* line 36, ../sass/screen.scss */
+.lst_top {
+  background-position: 0 -289px;
+}
+
+/* line 36, ../sass/screen.scss */
+.m2 {
+  background-position: 0 -590px;
+}
+
+/* line 36, ../sass/screen.scss */
+.m2_small {
+  background-position: -18px -421px;
+}
+
+/* line 36, ../sass/screen.scss */
+.more {
+  background-position: 0 -370px;
+}
+
+/* line 36, ../sass/screen.scss */
+.more_dark {
+  background-position: -16px -321px;
+}
+
+/* line 36, ../sass/screen.scss */
+.msg {
+  background-position: -17px -404px;
+}
+
+/* line 36, ../sass/screen.scss */
+.msg_txt {
+  background-position: 0 -171px;
+}
+
+/* line 36, ../sass/screen.scss */
+.new {
+  background-position: -26px -171px;
+}
+
+/* line 36, ../sass/screen.scss */
+.next {
+  background-position: 0 -70px;
+}
+
+/* line 36, ../sass/screen.scss */
+.next_inert {
+  background-position: 0 -112px;
+}
+
+/* line 36, ../sass/screen.scss */
+.noti {
+  background-position: 0 -259px;
+}
+
+/* line 36, ../sass/screen.scss */
+.noti_txt {
+  background-position: -12px -57px;
+}
+
+/* line 36, ../sass/screen.scss */
+.open_view {
+  background-position: -29px -9px;
+}
+
+/* line 36, ../sass/screen.scss */
+.place {
+  background-position: -29px -244px;
+}
+
+/* line 36, ../sass/screen.scss */
+.plus {
+  background-position: 0 -387px;
+}
+
+/* line 36, ../sass/screen.scss */
+.prev {
+  background-position: -8px -70px;
+}
+
+/* line 36, ../sass/screen.scss */
+.prev_inert {
+  background-position: 0 -99px;
+}
+
+/* line 36, ../sass/screen.scss */
+.process {
+  background-position: 0 -479px;
+}
+
+/* line 36, ../sass/screen.scss */
+.realtime_ranking_down {
+  background-position: -29px -18px;
+}
+
+/* line 36, ../sass/screen.scss */
+.realtime_ranking_up {
+  background-position: 0 -46px;
+}
+
+/* line 36, ../sass/screen.scss */
+.reload {
+  background-position: -27px -99px;
+}
+
+/* line 36, ../sass/screen.scss */
+.reply {
+  background-position: -12px -84px;
+}
+
+/* line 36, ../sass/screen.scss */
+.report {
+  background-position: -8px -112px;
+}
+
+/* line 36, ../sass/screen.scss */
+.report2 {
+  background-position: -15px -99px;
+}
+
+/* line 36, ../sass/screen.scss */
+.reporter {
+  background-position: 0 -321px;
+}
+
+/* line 36, ../sass/screen.scss */
+.reporter_aa {
+  background-position: 0 -337px;
+}
+
+/* line 36, ../sass/screen.scss */
+.security {
+  background-position: 0 -501px;
+}
+
+/* line 36, ../sass/screen.scss */
+.silver {
+  background-position: -16px -370px;
+}
+
+/* line 36, ../sass/screen.scss */
+.stats_arrow_down {
+  background-position: -6px -18px;
+}
+
+/* line 36, ../sass/screen.scss */
+.stats_arrow_up {
+  background-position: -18px -9px;
+}
+
+/* line 36, ../sass/screen.scss */
+.sure {
+  background-position: 0 -126px;
+}
+
+/* line 36, ../sass/screen.scss */
+.tag_next {
+  background-position: -27px -126px;
+}
+
+/* line 36, ../sass/screen.scss */
+.tag_prev {
+  background-position: -29px -70px;
+}
+
+/* line 36, ../sass/screen.scss */
+.tag_start {
+  background-position: -17px -18px;
+}
+
+/* line 36, ../sass/screen.scss */
+.taglabel {
+  background-position: 0 -244px;
+}
+
+/* line 36, ../sass/screen.scss */
+.target_comment {
+  background-position: -16px -259px;
+}
+
+/* line 36, ../sass/screen.scss */
+.thumb_del {
+  background-position: 0 -567px;
+}
+
+/* line 36, ../sass/screen.scss */
+.top_view {
+  background-position: -12px -28px;
+}
+
+/* line 36, ../sass/screen.scss */
+.tw {
+  background-position: 0 -638px;
+}
+
+/* line 36, ../sass/screen.scss */
+.txt_craftsman {
+  background-position: 0 -199px;
+}
+
+/* line 36, ../sass/screen.scss */
+.txt_practice {
+  background-position: 0 -214px;
+}
+
+/* line 36, ../sass/screen.scss */
+.txt_probationary {
+  background-position: 0 -184px;
+}
+
+/* line 36, ../sass/screen.scss */
+.txt_specialty {
+  background-position: 0 -229px;
+}
+
+/* line 36, ../sass/screen.scss */
+.vote_down {
+  background-position: 0 -404px;
+}
+
+/* line 36, ../sass/screen.scss */
+.vote_up {
+  background-position: -17px -387px;
+}
+
+/* line 47, ../sass/screen.scss */
+.sprite_x2, .aa, .aa_on, .admin_a, .arrow_right, .bg_login, .bg_logout, .big_vote_down, .big_vote_up, .exp, .has_img, .ico_back, .ico_cmt, .ico_img, .ico_tag_down, .ico_tag_up, .ico_trash, .list_vote_down, .list_vote_up, .logo, .menu_cartoon, .menu_event, .menu_free, .menu_multimedia, .menu_notice, .menu_server, .menu_update, .menu_wiki, .reload, .reporter, .reporter_aa, .search, .search_keyword_del, .search_on, .taglabel {
+  background-image: url('/public/images/sprite_x2-sbcdd260484.png');
+  background-repeat: no-repeat;
+  -webkit-background-size: 104px auto;
+  -moz-background-size: 104px auto;
+  -o-background-size: 104px auto;
+  background-size: 104px auto;
+}
+
+/* line 54, ../sass/screen.scss */
+.aa {
+  background-position: -37px 0;
+}
+
+/* line 54, ../sass/screen.scss */
+.aa_on {
+  background-position: -53px 0;
+}
+
+/* line 54, ../sass/screen.scss */
+.admin_a {
+  background-position: -50px -15px;
+}
+
+/* line 54, ../sass/screen.scss */
+.arrow_right {
+  background-position: -6px -35px;
+}
+
+/* line 54, ../sass/screen.scss */
+.bg_login {
+  background-position: 0 -368px;
+}
+
+/* line 54, ../sass/screen.scss */
+.bg_logout {
+  background-position: -21px -135px;
+}
+
+/* line 54, ../sass/screen.scss */
+.big_vote_down {
+  background-position: -64px -15px;
+}
+
+/* line 54, ../sass/screen.scss */
+.big_vote_up {
+  background-position: 0 -135px;
+}
+
+/* line 54, ../sass/screen.scss */
+.exp {
+  background-position: -24px 0;
+}
+
+/* line 54, ../sass/screen.scss */
+.has_img {
+  background-position: -25px -15px;
+}
+
+/* line 54, ../sass/screen.scss */
+.ico_back {
+  background-position: 0 -35px;
+}
+
+/* line 54, ../sass/screen.scss */
+.ico_cmt {
+  background-position: -11px 0;
+}
+
+/* line 54, ../sass/screen.scss */
+.ico_img {
+  background-position: 0 -94px;
+}
+
+/* line 54, ../sass/screen.scss */
+.ico_tag_down {
+  background-position: -7px -15px;
+}
+
+/* line 54, ../sass/screen.scss */
+.ico_tag_up {
+  background-position: 0 -15px;
+}
+
+/* line 54, ../sass/screen.scss */
+.ico_trash {
+  background-position: 0 0;
+}
+
+/* line 54, ../sass/screen.scss */
+.list_vote_down {
+  background-position: -12px -35px;
+}
+
+/* line 54, ../sass/screen.scss */
+.list_vote_up {
+  background-position: -14px -15px;
+}
+
+/* line 54, ../sass/screen.scss */
+.logo {
+  background-position: 0 -68px;
+}
+
+/* line 54, ../sass/screen.scss */
+.menu_cartoon {
+  background-position: -50px -268px;
+}
+
+/* line 54, ../sass/screen.scss */
+.menu_event {
+  background-position: 0 -268px;
+}
+
+/* line 54, ../sass/screen.scss */
+.menu_free {
+  background-position: 0 -318px;
+}
+
+/* line 54, ../sass/screen.scss */
+.menu_multimedia {
+  background-position: -50px -318px;
+}
+
+/* line 54, ../sass/screen.scss */
+.menu_notice {
+  background-position: -50px -218px;
+}
+
+/* line 54, ../sass/screen.scss */
+.menu_server {
+  background-position: -50px -168px;
+}
+
+/* line 54, ../sass/screen.scss */
+.menu_update {
+  background-position: 0 -168px;
+}
+
+/* line 54, ../sass/screen.scss */
+.menu_wiki {
+  background-position: 0 -218px;
+}
+
+/* line 54, ../sass/screen.scss */
+.reload {
+  background-position: -39px -15px;
+}
+
+/* line 54, ../sass/screen.scss */
+.reporter {
+  background-position: -69px 0;
+}
+
+/* line 54, ../sass/screen.scss */
+.reporter_aa {
+  background-position: -83px 0;
+}
+
+/* line 54, ../sass/screen.scss */
+.search {
+  background-position: -50px -35px;
+}
+
+/* line 54, ../sass/screen.scss */
+.search_keyword_del {
+  background-position: -14px -94px;
+}
+
+/* line 54, ../sass/screen.scss */
+.search_on {
+  background-position: -32px -94px;
+}
+
+/* line 54, ../sass/screen.scss */
+.taglabel {
+  background-position: -23px -35px;
+}
+
+/* line 64, ../sass/screen.scss */
+body {
+  background: #000;
+}
+/* line 66, ../sass/screen.scss */
+body h1 {
+  border: 5px solid red;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}

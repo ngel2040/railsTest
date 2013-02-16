@@ -1,0 +1,70 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/utilities/sprites";
+
+@function generateSelector($items) {
+	//http://portfolio.miphe.com/showcase/sass-dry-selectors/
+	$temps: ();
+	@each $item in $items{
+		$temps: join($temps, unquote('.#{$item}'), comma);
+	}
+	@return $temps;
+}
+// use Functions
+// documents http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html
+// ex) ceil, round, nth
+// http://compass-style.org/reference/compass/utilities/sprites/sprite_img/
+// http://compass-style.org/reference/compass/helpers/image-dimensions/
+// ex) sprite-position, images-width
+
+//sprite
+@mixin sprite($glob, $prefix: "") {
+  $map: sprite-map($glob, $layout: smart, $spacing: 2px);
+  $all-items: sprite-names($map);
+
+	.#{$prefix}, #{generateSelector($all-items)} {
+		background-image: sprite-url($map);
+  	background-repeat: no-repeat;
+	}
+
+  @each $name in $all-items{
+    .#{$name} {
+    	background-position: sprite-position($map, #{$name});
+    }
+  }
+}
+
+//retina sprite
+@mixin retina_sprite($glob, $prefix: "") {
+  $map: sprite-map($glob, $layout: smart, $spacing: 2px);
+  $all-items: sprite-names($map);
+
+	.#{$prefix}, #{generateSelector($all-items)} {
+		background-image: sprite-url($map);
+  	background-repeat: no-repeat;
+  	@include background-size(ceil(image-width(sprite-path($map)) / 2) auto);
+	}
+
+  @each $name in $all-items{
+    .#{$name} {
+    	background-position: round(nth(sprite-position($map, #{$name}), 1) / 2) round(nth(sprite-position($map, #{$name}), 2) / 2);
+    }
+  }
+}
+
+//use sprite
+@include sprite("sprite/*.png", "sprite");
+@include retina_sprite("sprite_x2/*.png", "sprite_x2");
+
+body{
+	background:#000;
+	h1{
+		border:5px solid #f00;
+		@include border-radius(3px);
+	}
+}
