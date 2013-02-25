@@ -1,0 +1,17 @@
+<%= form_for(@wrap_jquery) do |f| %>
+  <% if @wrap_jquery.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@wrap_jquery.errors.count, "error") %> prohibited this wrap_jquery from being saved:</h2>
+
+      <ul>
+      <% @wrap_jquery.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

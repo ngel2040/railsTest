@@ -1,4 +1,6 @@
 RailsTest::Application.routes.draw do
+  resources :wrap_jqueries
+
   resources :html5games
 
   resources :back_bone_tests

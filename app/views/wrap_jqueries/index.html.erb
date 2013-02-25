@@ -1,0 +1,35 @@
+<% content_for :more_script do %>
+<style type="text/css">
+a{
+  font-size:20px;
+}
+.test{background:#000; color:#fff;}
+.test1{border:5px solid #f00;}
+.test2{border:5px solid #f0f;}
+.test3{font-size:30px;}
+</style>
+<% end %>
+<h1>test wrap jquery</h1>
+<a class="test">click</a>
+<% content_for :more_script do %>
+<%= javascript_include_tag "wrap_jqueries" %>
+<script type="text/javascript">
+$(document).ready(function() {
+  var cnt = 0;
+  $('.test').on('click', function(){
+    switch (cnt) {
+      case 0: ts(this).attrCss('addClass', 'test2'), ++cnt; break;
+      case 1: ts(this).attrCss('addClass', 'test3'), ++cnt; break;
+      case 2: ts(this).attrCss('removeClass', 'test2'), ++cnt; break;
+      case 3: ts(this).attrCss('removeClass', 'test3'), ++cnt; break;
+      case 4: ts(this).attrCss('toggleClass', 'test1'), cnt = 0; break;
+    }
+
+    if(ts(this).attrCss('hasClass', 'test')) {
+      ts(this).attrCss('css', {display: 'block', width: '300px', height:300});
+      ts(this).attrCss('css', 'border-radius', '10px');
+    }
+  });
+});
+</script>
+<% end %>
