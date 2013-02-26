@@ -8,9 +8,15 @@ a{
 .test2{border:5px solid #f0f;}
 .test3{font-size:30px;}
 </style>
+<link rel="stylesheet" type="text/css" href="http://code.jquery.com/qunit/qunit-1.11.0.css">
 <% end %>
 <h1>test wrap jquery</h1>
 <a class="test">click</a>
+
+<div id="qunit"></div>
+<div id="qunit-fixture"></div>
+
+
 <% content_for :more_script do %>
 <%= javascript_include_tag "wrap_jqueries" %>
 <script type="text/javascript">
@@ -32,4 +38,6 @@ $(document).ready(function() {
   });
 });
 </script>
+<script type="text/javascript" src="http://code.jquery.com/qunit/qunit-1.11.0.js"></script>
+<%= javascript_include_tag "test_wrap_jqueries" %>
 <% end %>
